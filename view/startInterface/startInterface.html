@@ -1,0 +1,28 @@
+<style>
+	#startInterface{
+		height: 100%;
+	}
+	#startInterface:focus{
+		outline: none;
+	}
+	.start-button{
+		position: absolute;
+	}
+</style>
+<div id = "startInterface" tabindex="0">
+	<div class="start-button" >
+		<button>开始游戏</button>
+	</div>
+</div>
+<script>
+	
+	$('.start-button').click(()=>{
+		$('#index').load('view/gameInterface/gameInterface.html')
+	})
+	$('#startInterface').focus()
+	$('#startInterface').keydown((e)=>{
+		if(e.keyCode === 13){
+			$('#index').load('view/gameInterface/gameInterface.html')
+		}
+	})
+</script>
